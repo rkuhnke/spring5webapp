@@ -13,6 +13,17 @@ public class Publisher {
     @OneToOne
     private Book book;
 
+    public Publisher() {
+    }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
+    }
+
     public Publisher(String name) {
         this.name = name;
     }

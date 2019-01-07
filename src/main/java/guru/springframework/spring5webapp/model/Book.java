@@ -14,6 +14,8 @@ public class Book {
     private Long id;
     private String title;
     private String isbn;
+
+    @OneToOne
     private Publisher publisher;
 
     @ManyToMany
@@ -24,10 +26,9 @@ public class Book {
     public Book() {
     }
 
-    public Book(String title, String isbn, Publisher publisher) {
+    public Book(String title, String isbn) {
         this.title = title;
         this.isbn = isbn;
-        this.publisher = publisher;
     }
 
     public Book(String title, String isbn, Publisher publisher, Set<Author> authors) {
